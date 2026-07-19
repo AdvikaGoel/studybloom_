@@ -1,0 +1,133 @@
+.tasks-container {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.tasks-container h2 {
+  color: var(--primary-pink);
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.task-input-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.task-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px;
+  border: 2px solid var(--light-pink);
+  border-radius: 12px;
+  font-size: 1em;
+  background: var(--light-yellow);
+  transition: all 0.3s ease;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 10px rgba(255, 182, 217, 0.2);
+}
+
+.add-task-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, var(--primary-pink), var(--lavender));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 182, 217, 0.3);
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-tasks {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-light);
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, var(--light-mint), var(--light-yellow));
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--mint);
+}
+
+.task-item:hover {
+  background: linear-gradient(135deg, var(--light-pink), var(--light-lavender));
+  border-color: var(--primary-pink);
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  background: var(--light-pink);
+}
+
+.task-checkbox {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: var(--primary-pink);
+}
+
+.task-text {
+  flex: 1;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--text-light);
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .tasks-container {
+    padding: 20px;
+  }
+
+  .task-input-group {
+    flex-direction: column;
+  }
+
+  .task-input {
+    min-width: 100%;
+  }
+
+  .add-task-btn {
+    width: 100%;
+  }
+}

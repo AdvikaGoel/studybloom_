@@ -1,0 +1,111 @@
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.timer-card {
+  background: white;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: var(--shadow);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 3px solid var(--primary-pink);
+}
+
+.timer-card h2 {
+  color: var(--primary-pink);
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.timer-display {
+  font-size: 5em;
+  font-weight: 700;
+  color: var(--primary-pink);
+  margin-bottom: 20px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 10px;
+  background: linear-gradient(135deg, var(--light-pink), var(--light-lavender));
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.timer-mode {
+  margin-bottom: 30px;
+}
+
+.timer-mode p {
+  font-size: 1.3em;
+  color: var(--lavender);
+  font-weight: 600;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.timer-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, var(--primary-pink), var(--lavender));
+  color: white;
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, var(--light-pink), var(--light-lavender));
+  color: var(--text-dark);
+}
+
+.timer-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 182, 217, 0.3);
+}
+
+.sessions-info {
+  margin: 30px 0;
+  padding: 20px;
+  background: var(--light-yellow);
+  border-radius: 12px;
+}
+
+.sessions-info p {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.sessions-info span {
+  color: var(--primary-pink);
+  font-size: 1.3em;
+}
+
+.progress-ring {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .timer-card {
+    padding: 30px;
+  }
+
+  .timer-display {
+    font-size: 3.5em;
+    letter-spacing: 5px;
+  }
+}
