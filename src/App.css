@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-pink: #FFB6D9;
+  --secondary-pink: #FFC0CB;
+  --light-pink: #FFE4E1;
+  --lavender: #E6D5FF;
+  --light-lavender: #F0E6FF;
+  --mint: #D4F4E6;
+  --light-mint: #E8F9F5;
+  --yellow: #FFFACD;
+  --light-yellow: #FFFEF0;
+  --text-dark: #5A5A7A;
+  --text-light: #8B8BA3;
+  --shadow: 0 8px 24px rgba(255, 182, 217, 0.3);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #FFE4E1 0%, #F0E6FF 50%, #E8F9F5 100%);
+  background-attachment: fixed;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: white;
+  padding: 20px 40px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-emoji {
+  font-size: 2.5em;
+}
+
+.nav-brand h1 {
+  color: var(--primary-pink);
+  font-size: 1.8em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background: linear-gradient(135deg, var(--light-pink), var(--light-lavender));
+  border: 2px solid var(--primary-pink);
+  color: var(--text-dark);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, var(--primary-pink), var(--lavender));
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-btn.active {
+  background: linear-gradient(135deg, var(--primary-pink), var(--lavender));
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Mascot */
+.mascot {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.mascot-emoji {
+  font-size: 3.5em;
+  animation: float 3s ease-in-out infinite;
+}
+
+.mascot-speech {
+  background: linear-gradient(135deg, var(--primary-pink), var(--secondary-pink));
+  color: white;
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-weight: 600;
+  max-width: 180px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.mascot-speech::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-top: 8px solid var(--secondary-pink);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-brand h1 {
+    font-size: 1.3em;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .mascot {
+    bottom: 20px;
+    right: 20px;
+  }
+}
